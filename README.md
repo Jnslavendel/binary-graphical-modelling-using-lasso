@@ -1,4 +1,4 @@
-# Graphical Modelling Using LASSO
+# Binary Graphical Modelling Using LASSO
 
 ## Overview
 
@@ -75,6 +75,12 @@ The neighbourhoods for the graphical model can be constructed using LASSO-CV, LA
 
 ```python
 neighbourhoods = graphical_modelling.findNeighbourhoodsLASSO_CV(basic_data, max_lambda=200)
+```
+
+Here, the neighbourhoods of all categorical dummy variables can be reverted to their original categorical variables using the following function:
+
+```python
+generalised_neighbourhoods = graphical_modelling.generaliseNeigbourhoodsToCategories(neighbourhoods)
 ```
 
 ### Visualising Graphs
