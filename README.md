@@ -95,7 +95,7 @@ identified_structure = evaluation.create_identified_structure_matrix(G_AND, ["X1
 SDH, YOUDEN = evaluate_SDH_YOUDEN(known_structure, identified_structure)
 ```
 
-### Reproducing Paper Results
+## Reproducing Paper Results
 
 'usage.py' contains several functions to directly reproduce the results in the paper.
 
