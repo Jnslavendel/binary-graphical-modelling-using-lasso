@@ -7,7 +7,6 @@ This project implements graphical modelling using LASSO (Least Absolute Shrinkag
 ## Author
 
 - **Name**: Jens van Drunen
-- **Affiliation**: Erasmus University Rotterdam
 - **Email**: 572793fd@eur.nl
 
 ## Project Structure
@@ -49,3 +48,11 @@ This project implements graphical modelling using LASSO (Least Absolute Shrinkag
 
 ### Usage 
 
+#### Generating Simulation Data 
+
+Use functions in 'simulation.py' to generate various datasets:
+
+```python
+basic_data = generateSample_simBasic(n=1000)
+smc_data = generateSample_simSMC(n=187)
+metabric_data = generateSample_simMETABRIC(n=1096)
