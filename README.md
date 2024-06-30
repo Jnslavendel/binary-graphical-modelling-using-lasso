@@ -48,6 +48,8 @@ This project implements graphical modelling using LASSO (Least Absolute Shrinkag
 
 ## Usage 
 
+All the functionalities below can be run by placing the appropriate function in 'main.py'.
+
 ### Generating Simulation Data
 
 To generate the various simulated datasets, use the following functions from `simulation.py`:
