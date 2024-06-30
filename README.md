@@ -46,13 +46,53 @@ This project implements graphical modelling using LASSO (Least Absolute Shrinkag
     pip install -r requirements.txt
     ```
 
-### Usage 
+## Usage 
 
-#### Generating Simulation Data 
+### Generating Simulation Data 
 
-Use functions in 'simulation.py' to generate various datasets:
+To generate the various simulated datasets, use the following functions from 'simulation.py':
 
 ```python
-basic_data = generateSample_simBasic(n=1000)
-smc_data = generateSample_simSMC(n=187)
-metabric_data = generateSample_simMETABRIC(n=1096)
+basic_data = simulation.generateSample_simBasic(n=1000)
+smc_data = simulation.generateSample_simSMC(n=187)
+metabric_data = simulation.generateSample_simMETABRIC(n=1096)
+```
+
+### Data Processing
+
+To preprocess the emperical datasets, functions in 'data_processing' can be used
+
+```python
+smc_data = data_processing.load_data("data-external/BRCA-SMC-2018-clinical-data.tsv")
+smc_data_processed = data_processing.preprocess_data_SMC(smc_data)
+
+metabric_data = data_processing.load_data("data-external/BRCA-METABRIC-2012-2016-clinical-data.tsv")
+metabric_data_processed = data_processing.preprocess_data_METABRIC(metabric_data)
+```
+
+### Graphical Modelling
+The neighbourhoods for the graphical model can be constructed using LASSO-cv, LASSO-aic, LASSO-bic or BOLASSO-cv. These functionalities are in 'graphical_modelling.py', and can be for example used as follows:
+
+```python
+neighbourhoods = graphical_modelling.findNeighbourhoodsLASSO_CV(basic_data, max_lambda=100)
+```
+
+### Visualising Graphs
+To visualise the constructed graphical models with found neighbourhoods, functionalities in 'graph_drawing.py' can be used, which rely on the AND-rule or OR-rule:
+
+```python
+G_AND = graph_drawing.constructGraph_AND(neighbourhoods)
+G_OR = graph_drawing.constructGraph_OR(neighbourhoods)
+```
+
+### Evaluation of Models
+Evaluate the performance of (simulation) graphical models using functions in 'evaluation.py', through ide
+
+```python
+known_structure = evaluation.create_known_structure_matrix_simBasic()
+identified_structure = evaluation.create_identified_structure_matrix(G_AND, ["X1", "X2", "X3", "X4", "X5"])
+
+SDH, YOUDEN = evaluate_SDH_YOUDEN(known_structure, identified_structure)
+```
+
+### 
