@@ -17,7 +17,7 @@ This project implements graphical modelling using LASSO (Least Absolute Shrinkag
 - `graphical_modelling.py`: LASSO-based graphical modelling functionalities.
 - `graph_drawing.py`: Functions for constructing and visualising graphs.
 - `evaluation.py`: Functions for evaluating the performance of graphical models.
-- `usage.py`: Integrates various functionalities to generate concrete results.
+- `usage.py`: Integrates various functionalities to directly replicate paper results.
 
 ## Project Setup
 
