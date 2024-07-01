@@ -38,7 +38,7 @@ This project implements graphical modelling using LASSO (Least Absolute Shrinkag
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/graphical-modelling-lasso.git](https://github.com/Jnslavendel/binary-graphical-modelling-using-lasso.git
+    git clone https://github.com/Jnslavendel/binary-graphical-modelling-using-lasso.git
     cd graphical-modelling-lasso
     ```
 2. Install the required packages:
