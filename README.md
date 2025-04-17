@@ -6,7 +6,7 @@ This project implements graphical modelling using LASSO (Least Absolute Shrinkag
 
 ## Author
 
-- **Name**: Jens van Drunen
+- **Name**: Jens 
 - **Email**: 572793fd@eur.nl
 
 ## Project Structure
